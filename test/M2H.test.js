@@ -59,3 +59,17 @@ test("should return correct higlight text with css", async () => {
     expect(m2h.parse("==text==", scss).html).toBe("<p><mark style=\"color: red;\">text</mark></p>");
 });
 
+test("should return correct code", async () => {
+
+    let md = `
+\`\`\`js
+const v = 10;
+\`\`\`
+    `;
+
+    let expected = `<pre><code class="js language-js">const v = 10;
+</code></pre>`;
+
+    expect(m2h.parse(md).html).toBe(expected);
+});
+
