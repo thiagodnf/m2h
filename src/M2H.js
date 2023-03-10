@@ -27,7 +27,6 @@ export default class M2H {
      * @param {object} settings this is the optional settings
      */
     constructor(settings = {}) {
-        this.scss = "";
         this.settings = settings;
         this.converter = new showdown.Converter({ ...defaults, ...settings });
     }
