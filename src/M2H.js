@@ -3,6 +3,7 @@ import juice from "juice";
 import sass from "sass";
 
 import Highlight from "./extensions/Highlight.js";
+import Code from "./extensions/Code.js";
 
 let defaults = {
     ghCompatibleHeaderId: true, // Generate heading IDs compatible with GitHub style
@@ -11,7 +12,7 @@ let defaults = {
     tables: true,               // Enable support for tables synta
     strikethrough: true,        // Enable support for strikethrough,
     simplifiedAutoLink: true,   // Enable automatic linking for plain text URLs.
-    extensions: [Highlight]
+    extensions: [Highlight, Code]
 }
 
 /**
@@ -35,7 +36,7 @@ export default class M2H {
      * @param {string} content string as markdown. Default is empty string
      * @return content as HTML
      */
-    parse(content, scss = "") {
+    parse(content, css = "", isSass = false) {
 
         if (!content) {
             return null;
@@ -43,7 +44,10 @@ export default class M2H {
 
         let html = this.converter.makeHtml(content);
         let metadata = this.converter.getMetadata();
-        let css = sass.compileString(scss).css.toString();
+
+        if (isSass) {
+            css = sass.compileString(css).css.toString();
+        }
 
         html = juice(`<style>${css}</style>${html}`, { preserveImportant: true });
 
