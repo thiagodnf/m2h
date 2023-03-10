@@ -93,3 +93,52 @@ const v = 10;
     expect(m2h.parse(md, scss).html).toBe(expected);
 });
 
+test("should return correct alert", async () => {
+
+    let md = `[Alert][primary]
+    This is a paragraph
+    [/Alert]`;
+
+    expect(m2h.parse(md).html).toBe("<div class=\"alert alert-primary\" role=\"alert\">This is a paragraph</div>");
+});
+
+test("should return correct card with no body", async () => {
+
+    let md = `
+        [Card]
+        This is the body
+        [/Card]
+    `.replace(/^\s+/gm, '');
+
+    expect(m2h.parse(md).html).toBe("<div class=\"card\"><p>This is the body</p></div>");
+});
+
+test("should return correct card with body", async () => {
+
+    let md = `
+        [Card]
+        [CardBody]
+        This is the body
+        [/CardBody]
+        [/Card]
+    `.replace(/^\s+/gm, '');
+
+    expect(m2h.parse(md).html).toBe("<div class=\"card\"><div class=\"card-body\"><p>This is the body</p></div></div>");
+});
+
+test("should return correct card with body", async () => {
+
+    let md = `
+        [Card]
+        [CardHeader]
+        Header
+        [/CardHeader]
+        [CardBody]
+        This is the body
+        [/CardBody]
+        [/Card]
+    `.replace(/^\s+/gm, '');
+
+    expect(m2h.parse(md).html).toBe("<div class=\"card\"><div class=\"card-header\">Header</div>\n<div class=\"card-body\"><p>This is the body</p></div></div>");
+});
+
