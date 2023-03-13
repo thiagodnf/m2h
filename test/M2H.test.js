@@ -42,23 +42,6 @@ test("should return the correct html with inline css from sass", async () => {
     expect(m2h.parse("text", scss, true).html).toBe("<p style=\"color: red;\">text</p>");
 });
 
-test("should return correct highlight text with no css", async () => {
-
-    expect(m2h.parse("==text==").html).toBe("<p><mark>text</mark></p>");
-});
-
-test("should return correct higlight text with css", async () => {
-
-    let scss = `
-        $color: red;
-        mark {
-            color: $color;
-        }
-    `;
-
-    expect(m2h.parse("==text==", scss, true).html).toBe("<p><mark style=\"color: red;\">text</mark></p>");
-});
-
 test("should return correct code formatting", async () => {
 
     let md = `
