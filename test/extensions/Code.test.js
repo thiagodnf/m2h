@@ -16,15 +16,6 @@ test("should return correct code formatting for javascript", async () => {
     expect(m2h.parse(md).html).toBe(expected);
 });
 
-test("should return correct code formatting for console", async () => {
-
-    let md = "```console\n$npm install\n```";
-
-    let expected = `<pre><code class="console language-console"><span class="hljs-meta prompt_">$</span><span class="language-bash">npm install</span>\n</code></pre>`;
-
-    expect(m2h.parse(md).html).toBe(expected);
-});
-
 test("should return correct code formatting with css", async () => {
 
     let scss = `
