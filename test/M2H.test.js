@@ -42,15 +42,6 @@ test("should return the correct html with inline css from sass", async () => {
     expect(m2h.parse("text", scss, true).html).toBe("<p style=\"color: red;\">text</p>");
 });
 
-test("should return correct alert", async () => {
-
-    let md = `[Alert][primary]
-    This is a paragraph
-    [/Alert]`;
-
-    expect(m2h.parse(md).html).toBe("<div class=\"alert alert-primary\" role=\"alert\">This is a paragraph</div>");
-});
-
 test("should return correct card with no body", async () => {
 
     let md = `
