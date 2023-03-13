@@ -4,15 +4,19 @@ export default function Alert() {
         type: "lang",
         filter: function (text, converter) {
 
-            var regex = new RegExp(/\[Alert\]\[(.*)\]((\n|\r|.)*?)\[\/Alert\]/, "gm");
+            var regex = new RegExp(/\[Alert\]\[(.*?)\](?:\[(.*?)\])?((\n|\r|.)*?)\[\/Alert\]/, "gm");
 
-            text = text.trim().replace(regex, function (match, type, content) {
+            text = text.trim().replace(regex, function (match, type, additionalCls, content) {
+
+                additionalCls = additionalCls || "";
 
                 content = converter.makeHtml(content.trim());
 
                 content = content.replace(/^<p>(.*)<\/p>$/, "$1");
 
-                return `<div class="alert alert-${type}" role="alert">${content}</div>`;
+                let cls = `alert alert-${type} ${additionalCls}`;
+
+                return `<div class="${cls.trim()}">${content}</div>`;
             });
 
             return text;
