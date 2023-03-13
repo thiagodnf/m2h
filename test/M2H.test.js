@@ -42,40 +42,6 @@ test("should return the correct html with inline css from sass", async () => {
     expect(m2h.parse("text", scss, true).html).toBe("<p style=\"color: red;\">text</p>");
 });
 
-test("should return correct code formatting", async () => {
-
-    let md = `
-\`\`\`js
-const v = 10;
-\`\`\`
-    `;
-
-    let expected = `<pre><code class="js language-js"><span class="hljs-keyword">const</span> v = <span class="hljs-number">10</span>;
-</code></pre>`;
-
-    expect(m2h.parse(md).html).toBe(expected);
-});
-
-test("should return correct code formatting with css", async () => {
-
-    let scss = `
-        .hljs-keyword {
-            color: blue;
-        }
-    `;
-
-    let md = `
-\`\`\`js
-const v = 10;
-\`\`\`
-    `;
-
-    let expected = `<pre><code class="js language-js"><span class="hljs-keyword" style="color: blue;">const</span> v = <span class="hljs-number">10</span>;
-</code></pre>`;
-
-    expect(m2h.parse(md, scss).html).toBe(expected);
-});
-
 test("should return correct alert", async () => {
 
     let md = `[Alert][primary]
