@@ -16,11 +16,11 @@ test("should return correct code formatting for javascript", async () => {
     expect(m2h.parse(md).html).toBe(expected);
 });
 
-test("should return correct code formatting for bash", async () => {
+test("should return correct code formatting for console", async () => {
 
-    let md = "```bash\n$npm install\n```";
+    let md = "```console\n$npm install\n```";
 
-    let expected = `<pre><code class="bash language-bash"><span class="hljs-variable">$npm</span> install\n</code></pre>`;
+    let expected = `<pre><code class="console language-console"><span class="hljs-meta prompt_">$</span><span class="language-bash">npm install</span>\n</code></pre>`;
 
     expect(m2h.parse(md).html).toBe(expected);
 });
