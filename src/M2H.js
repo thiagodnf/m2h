@@ -16,6 +16,7 @@ let defaults = {
     tables: true,               // Enable support for tables synta
     strikethrough: true,        // Enable support for strikethrough,
     simplifiedAutoLink: true,   // Enable automatic linking for plain text URLs.
+    m2hEnableBootstrap: true,
     extensions: [Highlight, Code, Alert, Card, CardBody, CardHeader]
 }
 

@@ -4,6 +4,10 @@ export default function Alert() {
         type: "lang",
         filter: function (text, converter) {
 
+            if (!converter.getOptions().m2hEnableBootstrap) {
+                return text;
+            }
+
             var regex = new RegExp(/\[Alert\]\[(.*?)\](?:\[(.*?)\])?((\n|\r|.)*?)\[\/Alert\]/, "gm");
 
             text = text.trim().replace(regex, function (match, type, additionalCls, content) {

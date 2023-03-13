@@ -60,3 +60,14 @@ test("should return correct alert with additional html classes", async () => {
 
     expect(m2h.parse(md).html).toBe(expected);
 });
+
+test("should return correct alert when boostrap is not enabled", async () => {
+
+    m2h = new M2H({ m2hEnableBootstrap: false });
+
+    let md = `[Alert][primary]This is a paragraph[/Alert]`;
+
+    let expected = "<p>[Alert][primary]This is a paragraph[/Alert]</p>"
+
+    expect(m2h.parse(md).html).toBe(expected);
+});
