@@ -58,5 +58,5 @@ test("should return correct higlighted text with css", async () => {
     let md = "==text==";
     let expected = "<p><mark style=\"color: red;\">text</mark></p>";
 
-    expect(m2h.parse("==text==", scss, true).html).toBe(expected);
+    expect(m2h.parse(md, scss, true).html).toBe(expected);
 });
