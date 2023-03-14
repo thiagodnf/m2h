@@ -33,35 +33,13 @@ test("should return correct badge in a paragraph", async () => {
     expect(m2h.parse(md).html).toBe(expected);
 });
 
-// test("should return correct alert with html tags", async () => {
+test("should return correct badge when boostrap is not enabled", async () => {
 
-//     let md = `[Alert][warning]
-//     <strong>bold</strong>
-//     [/Alert]`;
+    m2h = new M2H({ m2hEnableBootstrap: false });
 
-//     let expected = "<div class=\"alert alert-warning\"><strong>bold</strong></div>"
+    let md = `[Badge][warning]0[/Badge]`;
 
-//     expect(m2h.parse(md).html).toBe(expected);
-// });
+    let expected = "<p>[Badge][warning]0[/Badge]</p>"
 
-// test("should return correct alert with additional html classes", async () => {
-
-//     let md = `[Alert][warning][red]
-//     text
-//     [/Alert]`;
-
-//     let expected = "<div class=\"alert alert-warning red\">text</div>"
-
-//     expect(m2h.parse(md).html).toBe(expected);
-// });
-
-// test("should return correct alert when boostrap is not enabled", async () => {
-
-//     m2h = new M2H({ m2hEnableBootstrap: false });
-
-//     let md = `[Alert][primary]This is a paragraph[/Alert]`;
-
-//     let expected = "<p>[Alert][primary]This is a paragraph[/Alert]</p>"
-
-//     expect(m2h.parse(md).html).toBe(expected);
-// });
+    expect(m2h.parse(md).html).toBe(expected);
+});
