@@ -12,7 +12,7 @@ const optionDefinitions = [
 const options = commandLineArgs(optionDefinitions)
 
 if (!options.src) {
-    throw new Error("The source files is required")
+    throw new Error("The source file is required")
 }
 
 let scssFileContent = "";
