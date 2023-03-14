@@ -6,11 +6,21 @@ beforeEach(() => {
     m2h = new M2H();
 });
 
-test("should return correct card", async () => {
+test("should return the complete card", async () => {
 
     let md = "[Card]\n[CardHeader]Header[/CardHeader]\n[CardBody]\nThis is a card\n[/CardBody]\n[/Card]";
 
     let expected = "<div class=\"card\"><div class=\"card-header\">Header</div>\n<div class=\"card-body\"><p>This is a card</p></div></div>"
+
+    expect(m2h.parse(md).html).toBe(expected);
+});
+
+
+test("should return card only with card-body", async () => {
+
+    let md = "[Card]\n[CardBody]\nThis is a card\n[/CardBody]\n[/Card]";
+
+    let expected = "<div class=\"card\"><div class=\"card-body\"><p>This is a card</p></div></div>"
 
     expect(m2h.parse(md).html).toBe(expected);
 });
