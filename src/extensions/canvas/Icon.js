@@ -1,11 +1,5 @@
 export default function Icon() {
 
-    // return [{
-    //     type: "lang",
-    //     regex: /\[icon\]\[(.*)\]/g,
-    //     replace: "<i class=\"icon-$1\"></i>"
-    // }];
-
     return [{
         type: "lang",
         filter: function (text, converter, options) {

@@ -8,6 +8,7 @@ import Alert from "./extensions/bootstrap/Alert.js";
 import Badge from "./extensions/bootstrap/Badge.js";
 import Card from "./extensions/bootstrap/Card.js";
 import Icon from "./extensions/canvas/Icon.js";
+import H2AsBold from "./extensions/canvas/H2AsBold.js";
 
 let defaults = {
     ghCompatibleHeaderId: true, // Generate heading IDs compatible with GitHub style
@@ -18,7 +19,7 @@ let defaults = {
     simplifiedAutoLink: true,   // Enable automatic linking for plain text URLs.
     m2hEnableBootstrap: true,
     m2hEnableCanvas: true,
-    extensions: [Highlight, Code, Alert, Badge, Card, Icon]
+    extensions: [Highlight, Code, Alert, Badge, Card, Icon, H2AsBold]
 }
 
 /**
