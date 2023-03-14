@@ -15,6 +15,7 @@
     ],
     "scripts": {
         "test": "jest --coverage ./test",
+        "build": "",
         "start": "node index.js assets/example.md --scss assets/style.scss"
     },
     "devDependencies": {
