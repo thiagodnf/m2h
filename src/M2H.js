@@ -8,7 +8,8 @@ import Alert from "./extensions/bootstrap/Alert.js";
 import Badge from "./extensions/bootstrap/Badge.js";
 import Card from "./extensions/bootstrap/Card.js";
 import Icon from "./extensions/canvas/Icon.js";
-import H2AsBold from "./extensions/canvas/H2AsBold.js";
+import AddHeadingAsBold from "./extensions/AddHeadingAsBold.js";
+import AddHeadingNumbers from "./extensions/AddHeadingNumbers.js";
 
 let defaults = {
     ghCompatibleHeaderId: true, // Generate heading IDs compatible with GitHub style
@@ -17,9 +18,14 @@ let defaults = {
     tables: true,               // Enable support for tables synta
     strikethrough: true,        // Enable support for strikethrough,
     simplifiedAutoLink: true,   // Enable automatic linking for plain text URLs.
+    headerLevelStart: 1,        // Set starting level for the heading tags.
+    m2hAddHeadingAsBold: [],
+    m2hAddHeadingNumbers: false,
+    m2hAddHeadingNumbersStartLevel: 1,
     m2hEnableBootstrap: true,
     m2hEnableCanvas: true,
-    extensions: [Highlight, Code, Alert, Badge, Card, Icon, H2AsBold]
+    m2hEnableHeadingNumbers: true,
+    extensions: [Highlight, Code, Alert, Badge, Card, Icon, AddHeadingAsBold, AddHeadingNumbers]
 }
 
 /**
