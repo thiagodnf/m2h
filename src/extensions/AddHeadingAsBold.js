@@ -1,4 +1,4 @@
-export default function SetH2AsBold() {
+export default function AddHeadingAsBold() {
 
     return [{
         type: "output",
