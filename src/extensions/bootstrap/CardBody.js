@@ -2,9 +2,13 @@ export default function CardBody() {
 
     return [{
         type: "lang",
-        filter: function (text, converter) {
+        filter: function (text, converter, options) {
 
-            var regex = new RegExp(/\[CardBody\]((\n|\r|.)*?)\[\/CardBody\]/, "gm");
+            if (!options.m2hEnableBootstrap) {
+                return text;
+            }
+
+            let regex = new RegExp(/\[CardBody\]((\n|\r|.)*?)\[\/CardBody\]/, "gm");
 
             text = text.trim().replace(regex, function (match, content) {
 

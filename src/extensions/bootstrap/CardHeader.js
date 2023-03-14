@@ -2,7 +2,11 @@ export default function CardHeader() {
 
     return [{
         type: "lang",
-        filter: function (text, converter) {
+        filter: function (text, converter, options) {
+
+            if (!options.m2hEnableBootstrap) {
+                return text;
+            }
 
             var regex = new RegExp(/\[CardHeader\]((\n|\r|.)*?)\[\/CardHeader\]/, "gm");
 

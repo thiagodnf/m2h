@@ -2,9 +2,9 @@ export default function Alert() {
 
     return [{
         type: "lang",
-        filter: function (text, converter) {
+        filter: function (text, converter, options) {
 
-            if (!converter.getOptions().m2hEnableBootstrap) {
+            if (!options.m2hEnableBootstrap) {
                 return text;
             }
 
