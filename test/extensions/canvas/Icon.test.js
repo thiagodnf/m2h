@@ -16,7 +16,7 @@ test("should return the correct icon", async () => {
 
 test("should return correct output when canvas is not enabled", async () => {
 
-    m2h = new M2H({ m2hEnableCanvas: false });
+    m2h = new M2H({ m2hEnableCanvasIcon: false });
 
     let md = "[icon][alert]";
     let expected = "<p>[icon][alert]</p>"

@@ -4,7 +4,7 @@ export default function Icon() {
         type: "lang",
         filter: function (text, converter, options) {
 
-            if (!options.m2hEnableCanvas) {
+            if (!options.m2hEnableCanvasIcon) {
                 return text;
             }
 
