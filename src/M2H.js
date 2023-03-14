@@ -7,6 +7,7 @@ import Code from "./extensions/Code.js";
 import Alert from "./extensions/bootstrap/Alert.js";
 import Badge from "./extensions/bootstrap/Badge.js";
 import Card from "./extensions/bootstrap/Card.js";
+import Icon from "./extensions/canvas/Icon.js";
 
 let defaults = {
     ghCompatibleHeaderId: true, // Generate heading IDs compatible with GitHub style
@@ -16,7 +17,8 @@ let defaults = {
     strikethrough: true,        // Enable support for strikethrough,
     simplifiedAutoLink: true,   // Enable automatic linking for plain text URLs.
     m2hEnableBootstrap: true,
-    extensions: [Highlight, Code, Alert, Badge, Card]
+    m2hEnableCanvas: true,
+    extensions: [Highlight, Code, Alert, Badge, Card, Icon]
 }
 
 /**
