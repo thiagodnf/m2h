@@ -5,6 +5,7 @@ import sass from "sass";
 import Highlight from "./extensions/Highlight.js";
 import Code from "./extensions/Code.js";
 import Alert from "./extensions/bootstrap/Alert.js";
+import Badge from "./extensions/bootstrap/Badge.js";
 import Card from "./extensions/bootstrap/Card.js";
 import CardBody from "./extensions/bootstrap/CardBody.js";
 import CardHeader from "./extensions/bootstrap/CardHeader.js";
@@ -17,7 +18,7 @@ let defaults = {
     strikethrough: true,        // Enable support for strikethrough,
     simplifiedAutoLink: true,   // Enable automatic linking for plain text URLs.
     m2hEnableBootstrap: true,
-    extensions: [Highlight, Code, Alert, Card, CardBody, CardHeader]
+    extensions: [Highlight, Code, Alert, Badge, Card, CardBody, CardHeader]
 }
 
 /**
