@@ -24,4 +24,4 @@ export default function SetH2AsBold() {
             return text;
         }
     }];
-};
+}

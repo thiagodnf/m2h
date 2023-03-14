@@ -5,4 +5,4 @@ export default function Highlight() {
         regex: /==(.*?)==/gm,
         replace: "<mark>$1</mark>"
     }];
-};
+}

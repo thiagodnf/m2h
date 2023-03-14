@@ -6,6 +6,9 @@
     "license": "MIT",
     "type": "module",
     "main": "index.js",
+    "engines": {
+        "node": ">=16.14.0"
+    },
     "keywords": [
         "css",
         "html",
@@ -15,13 +18,15 @@
     ],
     "scripts": {
         "test": "jest --coverage ./test",
+        "lint": "eslint .",
+        "lint-fix": "npx eslint . --fix",
         "build": "",
         "start": "node index.js assets/example.md --scss assets/style.scss"
     },
     "devDependencies": {
         "@babel/preset-env": "7.20.2",
         "babel-jest": "29.4.3",
-        "eslint": "8.34.0",
+        "eslint": "^8.34.0",
         "jest": "29.4.3"
     },
     "dependencies": {

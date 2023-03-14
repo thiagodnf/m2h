@@ -11,7 +11,7 @@ test("should return correct code formatting for javascript", async () => {
 
     let md = "```js\nconst v = 10;\n```";
 
-    let expected = `<pre><code class="js language-js"><span class="hljs-keyword">const</span> v = <span class="hljs-number">10</span>;\n</code></pre>`;
+    let expected = "<pre><code class=\"js language-js\"><span class=\"hljs-keyword\">const</span> v = <span class=\"hljs-number\">10</span>;\n</code></pre>";
 
     expect(m2h.parse(md).html).toBe(expected);
 });
@@ -26,7 +26,7 @@ test("should return correct code formatting with css", async () => {
 
     let md = "```js\nconst v = 10;\n```";
 
-    let expected = `<pre><code class="js language-js"><span class="hljs-keyword" style="color: blue;">const</span> v = <span class="hljs-number">10</span>;\n</code></pre>`;
+    let expected = "<pre><code class=\"js language-js\"><span class=\"hljs-keyword\" style=\"color: blue;\">const</span> v = <span class=\"hljs-number\">10</span>;\n</code></pre>";
 
     expect(m2h.parse(md, css).html).toBe(expected);
 });

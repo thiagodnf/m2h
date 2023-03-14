@@ -12,10 +12,10 @@ export default function Icon() {
 
             text = text.replace(regex, function (match, icon) {
 
-                return `<i class=\"icon-${icon}\"></i>`;
+                return `<i class="icon-${icon}"></i>`;
             });
 
             return text;
         }
     }];
-};
+}

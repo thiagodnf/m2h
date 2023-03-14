@@ -26,4 +26,4 @@ export default function Badge() {
             return text;
         }
     }];
-};
+}

@@ -56,4 +56,4 @@ export default function AddHeadingNumbers() {
             return text;
         }
     }];
-};
+}

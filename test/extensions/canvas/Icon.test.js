@@ -19,7 +19,7 @@ test("should return correct output when canvas is not enabled", async () => {
     m2h = new M2H({ m2hEnableCanvasIcon: false });
 
     let md = "[icon][alert]";
-    let expected = "<p>[icon][alert]</p>"
+    let expected = "<p>[icon][alert]</p>";
 
     expect(m2h.parse(md).html).toBe(expected);
 });

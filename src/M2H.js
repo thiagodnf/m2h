@@ -26,7 +26,7 @@ let defaults = {
     m2hEnableCanvasIcon: true,
     m2hEnableHeadingNumbers: true,
     extensions: [Highlight, Code, Alert, Badge, Card, Icon, AddHeadingAsBold, AddHeadingNumbers]
-}
+};
 
 /**
  * This is the converter class

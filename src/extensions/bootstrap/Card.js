@@ -21,7 +21,7 @@ export default function Card() {
 
             return text;
         }
-    }
+    };
 
     let CardBody = {
         type: "lang",
@@ -64,4 +64,4 @@ export default function Card() {
             return text;
         }
     }];
-};
+}

@@ -48,7 +48,7 @@ test("should return correct card with no body", async () => {
         [Card]
         This is the body
         [/Card]
-    `.replace(/^\s+/gm, '');
+    `.replace(/^\s+/gm, "");
 
     expect(m2h.parse(md).html).toBe("<div class=\"card\"><p>This is the body</p></div>");
 });
@@ -61,7 +61,7 @@ test("should return correct card with body", async () => {
         This is the body
         [/CardBody]
         [/Card]
-    `.replace(/^\s+/gm, '');
+    `.replace(/^\s+/gm, "");
 
     expect(m2h.parse(md).html).toBe("<div class=\"card\"><div class=\"card-body\"><p>This is the body</p></div></div>");
 });
@@ -77,7 +77,7 @@ test("should return correct card with body", async () => {
         This is the body
         [/CardBody]
         [/Card]
-    `.replace(/^\s+/gm, '');
+    `.replace(/^\s+/gm, "");
 
     expect(m2h.parse(md).html).toBe("<div class=\"card\"><div class=\"card-header\">Header</div>\n<div class=\"card-body\"><p>This is the body</p></div></div>");
 });
