@@ -20,7 +20,7 @@
         "test": "jest --coverage ./test",
         "lint": "eslint .",
         "lint-fix": "npx eslint . --fix",
-        "build": "ncc build src/M2H.js -o dist --source-map --no-source-map-register --license licenses.txt",
+        "build": "ncc build src/M2H.js -o dist --source-map  --license licenses.txt",
         "start": "node index.js assets/example.md --scss assets/style.scss"
     },
     "devDependencies": {
