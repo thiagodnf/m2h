@@ -76,6 +76,23 @@ The output will be:
 }
 ```
 
+## Options
+
+You can change some of the default behavior through options.
+
+### `src`
+
+**Required** A list of files, directories, and wildcard patterns to be validated
+
+### `css`
+
+**Optional** The style (.css or .scss) files
+
+### `output`
+
+**Optional** The format of the output. Valid options: `html`, `metadata`, or `all`.
+
+
 
 ## For Developers
 
