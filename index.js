@@ -5,7 +5,7 @@ import FileUtils from "./src/utils/FileUtils.js";
 
 const optionDefinitions = [
     { name: "src", type: String, defaultOption: true },
-    { name: "scss", type: String, defaultValue: "" },
+    { name: "css", type: String, defaultValue: "", alias: "c" },
     { name: "output", type: String, defaultValue: "html", alias: "o" }
 ];
 
@@ -15,16 +15,18 @@ if (!options.src) {
     throw new Error("The source file is required");
 }
 
-let scssFileContent = "";
+let isSass = false;
+let cssFileContent = "";
 let mdFileContent = FileUtils.readFileContent(options.src);
 
-if (options.scss) {
-    scssFileContent = FileUtils.readFileContent(options.scss);
+if (options.css) {
+    isSass = FileUtils.isSass(options.css);
+    cssFileContent = FileUtils.readFileContent(options.css);
 }
 
 const m2h = new M2H();
 
-const parsed = m2h.parse(mdFileContent, scssFileContent);
+const parsed = m2h.parse(mdFileContent, cssFileContent, isSass);
 
 if (options.output === "html") {
     console.log(parsed.html);
