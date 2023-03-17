@@ -82,7 +82,7 @@ You can change some of the default behavior through options.
 
 ### `src`
 
-**Required** A list of files, directories, and wildcard patterns to be validated
+**Required** the markdown-based input file.
 
 ### `css`
 
