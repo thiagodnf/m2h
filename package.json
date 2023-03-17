@@ -1,6 +1,6 @@
 {
     "name": "@thiagodnf/m2h",
-    "version": "0.0.6",
+    "version": "0.0.8",
     "author": "Thiago Ferreira",
     "description": "A Markdown to HTML converter with inline CSS generated from SASS",
     "license": "MIT",
