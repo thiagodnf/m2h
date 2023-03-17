@@ -8,7 +8,7 @@ import Alert from "./extensions/bootstrap/Alert.js";
 import Badge from "./extensions/bootstrap/Badge.js";
 import Card from "./extensions/bootstrap/Card.js";
 import Icon from "./extensions/canvas/Icon.js";
-import AddHeadingAsBold from "./extensions/AddHeadingAsBold.js";
+import AddHeadingAsBold from "./extensions/canvas/AddHeadingAsBold.js";
 import AddHeadingNumbers from "./extensions/AddHeadingNumbers.js";
 
 let defaults = {
@@ -30,6 +30,7 @@ let defaults = {
 
 /**
  * This is the converter class
+ *
  * @author Thiago Ferreira
  */
 export default class M2H {

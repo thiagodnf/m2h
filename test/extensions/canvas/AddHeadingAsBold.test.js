@@ -1,4 +1,4 @@
-import M2H from "../../src/M2H.js";
+import M2H from "../../../src/M2H.js";
 
 let m2h = null;
 
