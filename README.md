@@ -84,11 +84,11 @@ You can change some of the default behavior through options.
 
 **Required** the markdown-based input file.
 
-### `css`
+### `--css` or `-c`
 
 **Optional** The style (.css or .scss) files
 
-### `output`
+### `--output` or `-o`
 
 **Optional** The format of the output. Valid options: `html`, `metadata`, or `all`.
 
