@@ -19,12 +19,15 @@ npm install @thiagodnf/m2h
 
 ## Quick Example
 
-For Node.js
+###  For Node.js
 
 ```js
 var m2h  = require("@thiagodnf/m2h/src/M2H.js");
 
 const mdFileContent = `
+---
+Author: Thiago Ferreira
+---
 # Heading 1
 
 This is paragraph
@@ -46,7 +49,7 @@ const isSass = true;
 
 const parsed = m2h.parse(mdFileContent, cssFileContent, isSass);
 
-console.log(parsed);
+console.log(parsed.html);
 
 ```
 The output will be:
@@ -57,6 +60,23 @@ The output will be:
 <h2 id="heading-2">Heading 2</h2>
 <p style="color: red;">This is another paragraph</p>
 ```
+
+### Terminal
+
+```bash
+node index.js example.md --css style.scss -o all
+```
+
+The output will be:
+
+```json
+{
+  "html": "<h1 id=\"heading-1\">Heading 1</h1><p style=\"color: red;\">This is paragraph</p><h2 id=\"heading-2\">Heading 2</h2><p style=\"color: red;\">This is another paragraph</p>",
+  "metadata": { "Author": "Thiago Ferreira" }
+}
+```
+
+
 ## For Developers
 
 Clone the project and then install all dependencies:

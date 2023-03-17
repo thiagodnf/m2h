@@ -21,7 +21,7 @@
         "lint": "eslint .",
         "lint-fix": "npx eslint . --fix",
         "build": "ncc build src/M2H.js -o dist --source-map  --license licenses.txt",
-        "start": "node index.js extra/example.md --css extra/style.scss"
+        "start": "node index.js extra/example.md --css extra/style.scss -o all"
     },
     "devDependencies": {
         "@babel/preset-env": "7.20.2",
