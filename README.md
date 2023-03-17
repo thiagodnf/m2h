@@ -22,7 +22,7 @@ npm install @thiagodnf/m2h
 For Node.js
 
 ```js
-var m2h  = require('@@thiagodnf/m2h/src/M2H.js'),
+var m2h  = require("@thiagodnf/m2h/src/M2H.js");
 
 const mdFileContent = `
 # Heading 1
