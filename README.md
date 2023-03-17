@@ -63,7 +63,7 @@ The output will be:
 
 ### Terminal
 
-```bash
+```shell
 node index.js example.md --css style.scss -o all
 ```
 
