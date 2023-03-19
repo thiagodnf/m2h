@@ -15,7 +15,7 @@ export default function AddHeadingAsBold() {
                 level = parseInt(level);
 
                 if (!options.m2hAddHeadingAsBold.includes(level)) {
-                    return text;
+                    return match;
                 }
 
                 return `<h${level} class='ui-priority-primary' ${attributes}>${content}</h${level}>`;

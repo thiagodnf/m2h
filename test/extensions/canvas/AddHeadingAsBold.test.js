@@ -6,6 +6,16 @@ beforeEach(() => {
     m2h = new M2H();
 });
 
+test("should return h2 as bold with h1 and h2", async () => {
+
+    m2h = new M2H({ m2hAddHeadingAsBold: [2] });
+
+    let md = "# Heading 1\n## Heading 2";
+    let expected = "<h1 id=\"heading-1\">Heading 1</h1>\n<h2 class=\"ui-priority-primary\" id=\"heading-2\">Heading 2</h2>";
+
+    expect(m2h.parse(md).html).toBe(expected);
+});
+
 test("should return the h2 as bold", async () => {
 
     m2h = new M2H({ m2hAddHeadingAsBold: [2] });
