@@ -8,7 +8,7 @@ beforeEach(() => {
 
 test("should return the correct icon", async () => {
 
-    let md = "[icon][alert]";
+    let md = "[Icon][alert]";
     let expected = "<p><i class=\"icon-alert\"></i></p>";
 
     expect(m2h.parse(md).html).toBe(expected);
@@ -18,8 +18,8 @@ test("should return correct output when canvas is not enabled", async () => {
 
     m2h = new M2H({ m2hEnableCanvasIcon: false });
 
-    let md = "[icon][alert]";
-    let expected = "<p>[icon][alert]</p>";
+    let md = "[Icon][alert]";
+    let expected = "<p>[Icon][alert]</p>";
 
     expect(m2h.parse(md).html).toBe(expected);
 });

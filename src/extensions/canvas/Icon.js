@@ -8,7 +8,7 @@ export default function Icon() {
                 return text;
             }
 
-            var regex = new RegExp(/\[icon\]\[(.*?)\]/, "gm");
+            var regex = new RegExp(/\[Icon\]\[(.*?)\]/, "gm");
 
             text = text.replace(regex, function (match, icon) {
 

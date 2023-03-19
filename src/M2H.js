@@ -10,6 +10,7 @@ import Card from "./extensions/bootstrap/Card.js";
 import Icon from "./extensions/canvas/Icon.js";
 import AddHeadingAsBold from "./extensions/canvas/AddHeadingAsBold.js";
 import AddHeadingNumbers from "./extensions/AddHeadingNumbers.js";
+import Grid from "./extensions/canvas/Grid.js";
 
 let defaults = {
     ghCompatibleHeaderId: true, // Generate heading IDs compatible with GitHub style
@@ -24,8 +25,9 @@ let defaults = {
     m2hAddHeadingNumbersStartLevel: 1,
     m2hEnableBootstrap: true,
     m2hEnableCanvasIcon: true,
+    m2hEnableCanvasGrid: true,
     m2hEnableHeadingNumbers: true,
-    extensions: [Highlight, Code, Alert, Badge, Card, Icon, AddHeadingAsBold, AddHeadingNumbers]
+    extensions: [Highlight, Code, Alert, Badge, Card, Icon, AddHeadingAsBold, AddHeadingNumbers, Grid]
 };
 
 /**
